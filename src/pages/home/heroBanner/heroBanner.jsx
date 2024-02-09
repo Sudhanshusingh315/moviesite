@@ -8,14 +8,18 @@ import "./heroBanner.css";
 export function Herobanner() {
   const [background, setBackground] = useState("");
   const [query, setQuery] = useState("");
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // creating the instance of useNavigate();
   const url = useSelector((state) => state.home.url);
   const { data, loading } = useFetch("/movie/upcoming"); // important note to cover (custom hooks)
 
+  // for generating a random number between 0-20
+  var currentDate = new Date();
+  var milliseconds = currentDate.getMilliseconds();
+  var randomNumber = (milliseconds % 20) + 1;
+
   useEffect(() => {
     const bg =
-      url.backdroup_base_url +
-      data?.results?.[Math.floor(Math.random() * 20)]?.backdrop_path;
+      url.backdroup_base_url + data?.results?.[randomNumber]?.backdrop_path;
     setBackground(bg);
   }, [data]);
 

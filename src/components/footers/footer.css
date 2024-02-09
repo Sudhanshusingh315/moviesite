@@ -1,0 +1,45 @@
+.menuItems {
+  /*this is for the ul component*/
+  font-family: monospace;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding-bottom: 2rem;
+}
+.menuItem {
+  /* so these are for the lists*/
+  list-style: none;
+  text-decoration: none;
+}
+
+.infoText {
+  width: 100%;
+  font-family: monospace;
+  font-weight: 200;
+  display: flex;
+  justify-items: center;
+  text-align: center;
+  color: white;
+  padding-bottom: 1rem;
+}
+.socialIcons {
+  color: white;
+  font-family: monospace;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.icon {
+  background-color: var(--black2);
+  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+}
+.icon:hover {
+  color: #da2f68;
+}
