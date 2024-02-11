@@ -1,0 +1,54 @@
+.imageSlider {
+  /* this contains the slider  */
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-slider {
+  /* this has the search slider  */
+  width: 97%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 370px;
+}
+
+.eachCard {
+  width: 300px;
+  min-height: 350px;
+}
+
+.imageCard {
+  border-radius: 14px;
+  width: 300px;
+  min-height: 100%;
+  overflow: hidden;
+}
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.textData {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.slick-track {
+  height: 547px;
+}
+
+.title {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-size: 30px;
+}
+
+.date {
+  color: white;
+  font-size: 19px;
+}

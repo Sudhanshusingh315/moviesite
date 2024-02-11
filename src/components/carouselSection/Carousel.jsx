@@ -8,31 +8,46 @@ import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 import { MyImage } from "../lazyloading/image";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./carousel.css";
 
 export const Carousel = ({ data, loading }) => {
   const url = useSelector((state) => state.home.url);
-  console.log(data);
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 5,
     slidesToScroll: 3,
   };
-  let box = document.querySelector(".slider-container");
-  const handleNext = () => {
-    let width = box.clientWidth;
-    console.log(width);
-    box.scrollLeft = box.scrollLeft + width;
-  };
-  const handlePrevious = () => {
-    console.log("pre");
-    let width = box.clientWidth;
-    console.log(width);
-    box.scrollLeft = box.scrollLeft - 300 - width;
-  };
-  return <>) : ( console.log("data hasn't been found yet") )}</>;
+  return (
+    <>
+      {!loading ? (
+        <div className="imageSlider">
+          <Slider {...settings}>
+            {data?.map((item) => {
+              return (
+                <>
+                  <div className="eachCard">
+                    <div className="imageCard">
+                      <MyImage
+                        className={"image"}
+                        src={url.backdroup_base_url + item?.poster_path}
+                      />
+                    </div>
+                    <div className="textData">
+                      <div className="title">{item?.title}</div>
+                      <div className="date">
+                        {dayjs(item.release_date).format("MMM DD,YYYY")}
+                      </div>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          </Slider>
+        </div>
+      ) : (
+        <div>working on loading</div>
+      )}
+    </>
+  );
 };
