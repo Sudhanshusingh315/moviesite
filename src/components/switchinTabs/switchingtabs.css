@@ -1,8 +1,11 @@
 .switchingTabs {
+  display: inline-block;
   height: 34px;
   background-color: white;
   border-radius: 20px;
   padding: 2px;
+  float: right;
+  margin-right: 30px;
 }
 .tabItems {
   display: flex;

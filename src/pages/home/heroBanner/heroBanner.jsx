@@ -52,7 +52,7 @@ export function Herobanner() {
                 type="text"
                 placeholder="Search for Movies for Tv Show.."
               />
-              <button>Search</button>
+              <button className="search">Search</button>
             </div>
           </div>
         </ContentWrapper>
