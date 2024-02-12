@@ -7,9 +7,10 @@ import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
 import { MyImage } from "../lazyloading/image";
+import CircleRating from "../circleRating/CircleRating";
 import Slider from "react-slick";
 import "./carousel.css";
-
+import Genres from "../genres/Genres.jsx";
 export const Carousel = ({ data, loading }) => {
   const url = useSelector((state) => state.home.url);
   const settings = {
@@ -17,6 +18,22 @@ export const Carousel = ({ data, loading }) => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,
+  };
+
+  // skeleton : not finished yet
+  const skeleton = () => {
+    <div className="imagesSliderskt">
+      <div className="eachCardskt">
+        <div className="imageCardskt">
+          <div className="imageskt"></div>
+        </div>
+        <div className="textData">
+          <div className="titleskt">
+            <div className="dateskt"></div>
+          </div>
+        </div>
+      </div>
+    </div>;
   };
   return (
     <>
@@ -32,6 +49,7 @@ export const Carousel = ({ data, loading }) => {
                         className={"image"}
                         src={url.backdroup_base_url + item?.poster_path}
                       />
+                      <CircleRating rating={item.vote_average.toFixed(1)} />
                     </div>
                     <div className="textData">
                       <div className="title">{item?.title}</div>
@@ -46,7 +64,7 @@ export const Carousel = ({ data, loading }) => {
           </Slider>
         </div>
       ) : (
-        <div>working on loading</div>
+        <div>Loding...</div>
       )}
     </>
   );

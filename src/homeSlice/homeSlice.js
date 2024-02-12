@@ -13,6 +13,7 @@ export const homeSlice = createSlice({
       state.url = action.payload;
     },
     getGeners: (state, action) => {
+      console.log("this is a payload", action.payload);
       state.genres = action.payload;
     },
   },

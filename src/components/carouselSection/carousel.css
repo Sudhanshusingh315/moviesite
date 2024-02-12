@@ -12,19 +12,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 370px;
+  min-height: 400px;
 }
 
 .eachCard {
   width: 300px;
   min-height: 350px;
+  overflow: hidden;
+  /* position: absolute; changed this value */
 }
 
 .imageCard {
+  /* border: 2px solid white; */
   border-radius: 14px;
   width: 300px;
-  min-height: 100%;
+  max-height: 445px;
   overflow: hidden;
+  position: relative;
 }
 .image {
   width: 100%;
@@ -32,6 +36,7 @@
   object-fit: cover;
 }
 .textData {
+  margin: 12px;
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -52,3 +57,4 @@
   color: white;
   font-size: 19px;
 }
+/* for skeleton animation */
