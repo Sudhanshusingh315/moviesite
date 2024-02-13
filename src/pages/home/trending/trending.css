@@ -1,10 +1,12 @@
 .carouselSection {
-  border: 2px solid white;
   position: relative;
   margin-bottom: 70px;
 }
 
 .carouselTitle {
-  font-size: 24px;
+  font-family: monospace;
+  font-size: 32px;
+  font-weight: bold;
   color: white;
+  margin-left: 54px;
 }

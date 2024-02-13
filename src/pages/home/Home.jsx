@@ -1,4 +1,6 @@
 import { Herobanner } from "./heroBanner/heroBanner";
+import Popular from "./popular/Popular";
+import TopRated from "./topRated/topRated";
 import Trending from "./trending/Trending";
 export function Home() {
   return (
@@ -6,7 +8,8 @@ export function Home() {
       <div className="homepage">
         <Herobanner />
         <Trending />
-        <div style={{ height: 1000 }}></div>
+        <Popular />
+        <TopRated />
       </div>
     </>
   );

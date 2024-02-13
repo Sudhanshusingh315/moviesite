@@ -1,8 +1,3 @@
-import React, { useEffect, useRef } from "react";
-import {
-  BsFillArrowLeftCircleFill,
-  BsFillArrowRightCircleFill,
-} from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
@@ -19,22 +14,23 @@ export const Carousel = ({ data, loading }) => {
     slidesToShow: 5,
     slidesToScroll: 3,
   };
+  const navigate = useNavigate();
 
   // skeleton : not finished yet
-  const skeleton = () => {
-    <div className="imagesSliderskt">
-      <div className="eachCardskt">
-        <div className="imageCardskt">
-          <div className="imageskt"></div>
-        </div>
-        <div className="textData">
-          <div className="titleskt">
-            <div className="dateskt"></div>
-          </div>
-        </div>
-      </div>
-    </div>;
-  };
+  // const skeleton = () => {
+  //   <div className="imagesSliderskt">
+  //     <div className="eachCardskt">
+  //       <div className="imageCardskt">
+  //         <div className="imageskt"></div>
+  //       </div>
+  //       <div className="textData">
+  //         <div className="titleskt">
+  //           <div className="dateskt"></div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>;
+  // };
   return (
     <>
       {!loading ? (
@@ -43,7 +39,11 @@ export const Carousel = ({ data, loading }) => {
             {data?.map((item) => {
               return (
                 <>
-                  <div className="eachCard">
+                  <div
+                    className="eachCard"
+                    onClick={() => navigate(`/${item.media_type}/${item.id}`)}
+                  >
+                    <Genres data={item?.genre_ids.slice(0, 2)} />
                     <div className="imageCard">
                       <MyImage
                         className={"image"}
@@ -64,7 +64,7 @@ export const Carousel = ({ data, loading }) => {
           </Slider>
         </div>
       ) : (
-        <div>Loding...</div>
+        <div style={{ color: "white" }}>Loding...</div>
       )}
     </>
   );

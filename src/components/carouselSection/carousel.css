@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 650px;
+
+  /* this needs to be commneted out but need to be kept so that i can tweak it */
+  /* border: 2px solid red; */
 }
 
 .slick-slider {
@@ -12,14 +16,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 400px;
+  height: 630px;
+
+  /* this needs to be commneted out but need to be kept so that i can tweak it */
+  /* border: 2px solid white; */
 }
 
 .eachCard {
   width: 300px;
   min-height: 350px;
   overflow: hidden;
-  /* position: absolute; changed this value */
+  position: relative;
+
+  /* this needs to be commneted out but need to be kept so that i can tweak it */
+  /* border: 2px solid orangered; */
 }
 
 .imageCard {
@@ -29,6 +39,9 @@
   max-height: 445px;
   overflow: hidden;
   position: relative;
+
+  /* this needs to be commneted out but need to be kept so that i can tweak it */
+  /* border: 2px solid orange; */
 }
 .image {
   width: 100%;
@@ -50,7 +63,7 @@
 .title {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
-  font-size: 30px;
+  font-size: 19px;
 }
 
 .date {

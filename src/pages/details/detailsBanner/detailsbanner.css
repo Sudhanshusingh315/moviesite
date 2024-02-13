@@ -1,0 +1,57 @@
+.backDropImg {
+  opacity: 0.1;
+  width: 100%;
+  /* need to change the height of this div */
+  min-height: 550px;
+  overflow: hidden;
+  position: relative;
+}
+.subjectDetails {
+  display: flex;
+  gap: 50px;
+
+  top: 137px;
+  left: 163px;
+  position: absolute;
+  z-index: 1;
+
+  /* this needs to be removed later */
+  border: 2px solid red;
+}
+
+.left {
+  width: 385px;
+  min-height: 534px;
+  overflow: hidden;
+}
+.posterImage {
+  border-radius: 20px;
+  width: 100%;
+  object-fit: cover;
+  max-height: 100%;
+
+  /* this needs to be removed later */
+  border: 2px solid white;
+}
+
+.right {
+  padding-top: 12px;
+  width: 600px;
+  color: white;
+  line-height: 2.3rem;
+}
+.subjectTitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.subjectTagLine {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.row {
+  margin-top: 9px;
+  border: 2px solid red;
+}

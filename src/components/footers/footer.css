@@ -1,5 +1,10 @@
+.footer {
+  background-color: var(--black3);
+}
+
 .menuItems {
   /*this is for the ul component*/
+  padding-top: 22px;
   font-family: monospace;
   color: white;
   font-weight: bold;
@@ -37,8 +42,14 @@
   gap: 50px;
 }
 .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%;
   background-color: var(--black2);
-  box-shadow: 10px 5px 5px rgb(0, 0, 0);
+  box-shadow: 2px -1px 9px rgb(218, 47, 104);
 }
 .icon:hover {
   color: #da2f68;

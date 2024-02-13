@@ -1,21 +1,19 @@
-.genres {
+.genresD {
   font-family: sans-serif;
-  position: absolute;
   color: white;
   font-size: 11px;
   font-weight: bold;
-  top: 395px;
-  left: 211px;
-  z-index: 1;
+  top: 84px;
+  left: 454px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
   gap: 5px;
 }
-.typeofG {
+.typeofGD {
   align-items: flex-start;
   display: flex;
   background-color: var(--pink);
-  border-radius: 4px;
-  padding: 3px 2px;
+  border-radius: 10px;
+  padding: 3px 9px;
 }
