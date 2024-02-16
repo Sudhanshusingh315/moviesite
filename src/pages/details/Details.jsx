@@ -4,6 +4,8 @@ import "./details.css";
 import DetailsBanner from "./detailsBanner/DetailsBanner";
 import Cast from "./detailsCast/Cast";
 import VideoSection from "./videosection/Videotrailer";
+import Similar from "./carouselSimilar/CarouselSimilar";
+import Recommendation from "./carouselSimilar/Recomendation";
 export function Details() {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}/videos`);
@@ -17,11 +19,11 @@ export function Details() {
       {!loading ? (
         <>
           <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
-          <Cast data={credits.cast} loading={creaditsLoading} />
+          <Cast data={credits?.cast} loading={creaditsLoading} />
           {/* Remove the section below after this */}
           <VideoSection data={data} loading={loading} />
-          <hr />
-          <div style={{ height: 1000 }}></div>
+          <Similar mediaType={mediaType} id={id} />
+          <Recommendation mediaType={mediaType} id={id} />
         </>
       ) : (
         <div>data will be loading</div>

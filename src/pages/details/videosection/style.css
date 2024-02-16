@@ -1,8 +1,7 @@
 .videosSection {
-  border: 2px solid red;
   position: relative;
   margin-bottom: 50px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .sectionHeading {
   font-size: 24px;
@@ -10,7 +9,6 @@
   margin-bottom: 25px;
 }
 .videos {
-  border: 2px solid white;
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -19,8 +17,7 @@
   padding: 0 20px;
 }
 .videoItem {
-  border: 2px solid red;
-  width: 250px;
+  width: 350px;
   flex-shrink: 0;
   cursor: pointer;
 }

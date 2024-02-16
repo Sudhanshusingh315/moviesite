@@ -1,15 +1,21 @@
-// for similar movies carousel
+import React from "react";
+
 import { Carousel } from "../../../components/carouselSection/Carousel";
 import useFetch from "../../../hooks/useFetch";
 
-export default function Similar({ media, id }) {
-  const { data, loading } = useFetch(`/${media}/${id}/similar`);
-  const title = media === "tv" ? "Similar TV Shows" : "Similar Movies";
-  console.log(data);
-  <Carousel
-    data={data?.results}
-    loading={loading}
-    title={title}
-    media={media}
-  />;
-}
+const Similar = ({ mediaType, id }) => {
+  const { data, loading, error } = useFetch(`/${mediaType}/${id}/similar`);
+  console.log("Similar movies data", data);
+  const title = mediaType === "tv" ? "Similar TV Shows" : "Similar Movies";
+
+  return (
+    <Carousel
+      title={title}
+      data={data?.results}
+      loading={loading}
+      endpoint={mediaType}
+    />
+  );
+};
+
+export default Similar;

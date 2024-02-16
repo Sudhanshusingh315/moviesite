@@ -5,6 +5,8 @@
   min-height: 550px;
   overflow: hidden;
   position: relative;
+
+  border: 2px solid red;
 }
 .subjectDetails {
   display: flex;

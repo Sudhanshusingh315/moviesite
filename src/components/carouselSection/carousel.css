@@ -71,3 +71,19 @@
   font-size: 19px;
 }
 /* for skeleton animation */
+.skeletonItem {
+  display: flex;
+  width: 300px;
+}
+.posterBlock {
+  display: flex;
+  border-radius: 12px;
+  width: 100%;
+  aspect-ratio: 1 / 1.5;
+  margin-bottom: 30px;
+}
+.loadingSkeleton {
+  margin-top: 12px;
+  display: flex;
+  gap: 30px;
+}

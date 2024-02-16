@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
-import { SlMenu } from "react-icons/sl";
-import { VscChromeClose } from "react-icons/vsc";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import header_pic from "../../../public/meow.jpeg";
 import "./header.css";
-import ContentWrapper from "../contentWrapper/Contentwrapper"; // for centering the div in all cases
 
 // start of my component
 export function Header() {
@@ -13,7 +10,7 @@ export function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
-  const src = "./meow.jpeg";
+  const header = header_pic;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,8 +21,13 @@ export function Header() {
   };
   return (
     <header>
-      <div className="logo">
-        <img className="my-logo" src={src} alt="" />
+      <div
+        className="logo"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        <img className="my-logo" src={header} alt="" />
       </div>
       <ul className="ulItems">
         <li className="ulmenuItems" onClick={() => navigationHandler("movie")}>

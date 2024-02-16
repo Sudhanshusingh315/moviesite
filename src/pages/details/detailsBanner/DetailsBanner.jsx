@@ -20,10 +20,10 @@ const DetailsBanner = ({ video, crew }) => {
     const minutes = time % 60;
     return `${hour}hr ${minutes}m`;
   };
-  const director = crew.filter(
+  const director = crew?.filter(
     (person) => person.known_for_department === "Directing"
   );
-  const writer = crew.filter(
+  const writer = crew?.filter(
     (person) => person.known_for_department === "Writing"
   );
 
@@ -34,6 +34,7 @@ const DetailsBanner = ({ video, crew }) => {
       {!loading ? (
         <>
           <div className="backDropImg">
+            <div className="opacity-layer"></div>
             <MyImage src={url.backdroup_base_url + data?.backdrop_path} />
           </div>
           <div className="subjectDetails">
@@ -70,29 +71,29 @@ const DetailsBanner = ({ video, crew }) => {
                 <div className="boxinfo">
                   <div className="infomation">
                     <span className="textBold">Status: </span>
-                    <span className="textinfo">{data.status}</span>
+                    <span className="textinfo">{data?.status}</span>
                   </div>
                   <div className="infomation">
                     <span className="textBold">Release Date: </span>
                     <span className="textinfo">
-                      {dayjs(data.release_date).format("MMMM D,YYYY")}
+                      {dayjs(data?.release_date).format("MMMM D,YYYY")}
                     </span>
                   </div>
                   <div className="infomation">
                     <span className="textBold">Runtime: </span>
-                    <span className="textinfo">{runtime(data.runtime)}</span>
+                    <span className="textinfo">{runtime(data?.runtime)}</span>
                   </div>
                 </div>
                 <hr />
                 <div className="infomation">
                   <span className="textBlod">Director: </span>
-                  <span className="textinfo">{director[0]?.name}</span>
+                  <span className="textinfo">{director?.name}</span>
                 </div>
                 <hr />
                 <div className="infomation">
                   <span className="textBlod">Writer: </span>
                   <span className="textinfo">
-                    {writer.map((item, i) => (
+                    {writer?.map((item, i) => (
                       <span key={item.id}>
                         {item.name}
                         {writer.length - 1 !== i && ","}
