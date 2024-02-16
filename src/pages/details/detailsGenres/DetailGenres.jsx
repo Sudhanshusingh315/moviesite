@@ -3,7 +3,6 @@ import "./style.css";
 const DetailsGenres = (data) => {
   const values = data.data;
   const geners = useSelector((state) => state.home.genres);
-  console.log("this is genres", geners);
   return (
     <>
       <div className="genresD">

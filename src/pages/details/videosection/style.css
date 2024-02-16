@@ -1,0 +1,106 @@
+.videosSection {
+  border: 2px solid red;
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+.sectionHeading {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 25px;
+}
+.videos {
+  border: 2px solid white;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+}
+.videoItem {
+  border: 2px solid red;
+  width: 250px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+.videoThumbnail {
+  margin-bottom: 15px;
+  position: relative;
+}
+.Ytimage {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.7s ease-in-out;
+}
+.playbuttonicon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+}
+.trianglebuttonicon {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 480;
+  stroke: white;
+  transform: translateY(0);
+  transition: all 0.7s ease-in-out;
+}
+.circlebuttionicon {
+  stroke: white;
+  stroke-dasharray: 650;
+  stroke-dashoffset: 1300;
+  transition: all 0.5s ease-in-out;
+}
+.Ytimage:hover {
+  opacity: 0.5;
+}
+.trianglebuttonicon:hover {
+  stroke-dashoffset: 0;
+  opacity: 1;
+  stroke: var(--pink);
+  animation: trailorPlay 0.7s ease-in-out;
+}
+.circlebuttionicon:hover {
+  stroke-dashoffset: 0;
+  stroke: var(--pink);
+}
+
+.videoTitle {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.videoSkeleton {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  margin-right: -20px;
+  margin-left: -20px;
+  padding: 0 20px;
+}
+.skItem {
+  width: 150px;
+  flex-shrink: 0;
+}
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.rowvid {
+  height: 20px;
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.row2 {
+  height: 20px;
+  width: 75%;
+  border-radius: 10px;
+}

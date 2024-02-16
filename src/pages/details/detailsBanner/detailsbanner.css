@@ -16,7 +16,7 @@
   z-index: 1;
 
   /* this needs to be removed later */
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .left {
@@ -31,27 +31,114 @@
   max-height: 100%;
 
   /* this needs to be removed later */
-  border: 2px solid white;
+  /* border: 2px solid white; */
 }
 
 .right {
   padding-top: 12px;
-  width: 600px;
+  width: 800px;
   color: white;
   line-height: 2.3rem;
 }
 .subjectTitle {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 45px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .subjectTagLine {
   font-size: 15px;
   font-style: italic;
+  color: rgb(135, 133, 133);
 }
 
 .row {
-  margin-top: 9px;
-  border: 2px solid red;
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+.playbtn {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+
+  svg {
+    width: 70px;
+    height: 70px;
+  }
+  .text {
+    font-size: 20px;
+    transition: all 0.7s ease-in-out;
+  }
+  .triangle {
+    stroke-dasharray: 240;
+    stroke-dashoffset: 480;
+    stroke: white;
+    transform: translateY(0);
+    transition: all 0.7s ease-in-out;
+  }
+  .circle {
+    width: 101px;
+    stroke: white;
+    stroke-dasharray: 650;
+    stroke-dashoffset: 1300;
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover {
+    .text {
+      color: var(--pink);
+    }
+    .triangle {
+      stroke-dashoffset: 0;
+      opacity: 1;
+      stroke: var(--pink);
+      animation: trailorPlay 0.7s ease-in-out;
+    }
+    .circle {
+      stroke-dashoffset: 0;
+      stroke: var(--pink);
+    }
+  }
+}
+
+.playbtn:hover {
+  color: var(--pink);
+}
+
+.trailer {
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 25px;
+}
+.overview {
+  font-family: sans-serif;
+  margin-top: 40px;
+  /* border: 2px solid red; */
+}
+.overviewTitle {
+  font-size: 20px;
+  /* border: 2px solid orange; */
+}
+.overviewtext {
+  font-size: 16px;
+  line-height: 2rem;
+}
+.textBold {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+.infomation {
+  /* border: 2px solid white; */
+}
+.boxinfo {
+  display: flex;
+  gap: 18px;
+}
+.textinfo {
+  color: rgb(135, 133, 133);
+}
+
+.castInfoBox {
+  margin-top: 50px;
 }

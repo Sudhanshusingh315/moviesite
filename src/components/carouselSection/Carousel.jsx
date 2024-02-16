@@ -6,7 +6,7 @@ import CircleRating from "../circleRating/CircleRating";
 import Slider from "react-slick";
 import "./carousel.css";
 import Genres from "../genres/Genres.jsx";
-export const Carousel = ({ data, loading }) => {
+export const Carousel = ({ data, loading, media, title }) => {
   const url = useSelector((state) => state.home.url);
   const settings = {
     infinite: true,
@@ -52,7 +52,7 @@ export const Carousel = ({ data, loading }) => {
                       <CircleRating rating={item.vote_average.toFixed(1)} />
                     </div>
                     <div className="textData">
-                      <div className="title">{item?.title}</div>
+                      <div className="titleData">{item?.title}</div>
                       <div className="date">
                         {dayjs(item.release_date).format("MMM DD,YYYY")}
                       </div>
