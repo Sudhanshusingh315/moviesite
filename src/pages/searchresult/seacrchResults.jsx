@@ -1,7 +1,5 @@
-// import React, { useState, useEffect } from "react";
-// import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import MovieCard from "../../components/movieCard/MovieCard";
 import "./searchResults.css";
 import Spinner from "../../components/spinner/Spinner";
 import { fetchingApi } from "../../utils/api";
@@ -25,11 +23,12 @@ export const Searchresults = () => {
   const fetchNextData = () => {
     setLoading(true);
     fetchingApi(`/search/multi?query=${query}&page=${pageNum}`).then((res) => {
-      if (data.results) {
-        setData({
-          ...data,
-          results: [...data.results, ...res.results],
-        });
+      if (data?.results) {
+        setData((prevData) => ({
+          ...prevData,
+          results: [...prevData?.results, ...res?.results],
+        }));
+        console.log(data);
       } else {
         setData(res);
       }
@@ -42,7 +41,37 @@ export const Searchresults = () => {
 
   return (
     <div className="searchResultsPage">
-      {loadin && <Spinner initial={true} />}
+      {/* {loadin && <Spinner initial={true} />} */}
+      {!loadin && (
+        <div>
+          {data?.results.length > 0 ? (
+            <>
+              <div className="pageTitle">
+                {`Search ${
+                  data?.total_results > 1 ? "results" : "result"
+                } of '${query}'`}
+              </div>
+              <InfiniteScroll
+                className="content"
+                dataLength={data?.results.length}
+                next={fetchNextData}
+                inverse={true}
+                hasMore={pageNum <= data?.total_pages}
+                loader={<h4 style={{ color: "white" }}>Loading....</h4>}
+              >
+                {data?.results?.map((item, index) => {
+                  if (item?.media_type === "person") return;
+                  return (
+                    <MovieCard key={index} data={item} fromSearch={true} />
+                  );
+                })}
+              </InfiniteScroll>
+            </>
+          ) : (
+            <span className="resultNotFound">Sorry, No results were found</span>
+          )}
+        </div>
+      )}
     </div>
   );
 };

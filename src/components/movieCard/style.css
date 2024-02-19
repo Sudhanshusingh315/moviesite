@@ -1,0 +1,26 @@
+.movieCard {
+  width: 300px;
+  min-height: 350px;
+}
+.posterBlockMC {
+  overflow: hidden;
+  width: 300px;
+  min-height: 350px;
+  border-radius: 12px;
+}
+
+.textBlockMC {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.titleMC {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: white;
+}
+.dateMC {
+  color: rgb(131, 129, 129);
+}

@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./spiner.css";
 
 const Spinner = ({ initial }) => {
