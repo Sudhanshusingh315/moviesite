@@ -4,7 +4,6 @@ import {
   FaTwitter,
   FaLinkedin,
 } from "react-icons/fa";
-// import ContentWrapper from "../contentWrapper/Contentwrapper";
 import "./footer.css";
 
 const Footer = () => {

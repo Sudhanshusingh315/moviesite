@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-import { MyImage } from "../lazyloading/image";
+import { MyImage } from "../lazyloading/Image";
 import CircleRating from "../circleRating/CircleRating";
 import Slider from "react-slick";
 import "./carousel.css";

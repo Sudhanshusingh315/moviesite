@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // important notes to cover
 import { useSelector } from "react-redux";
 import useFetch from "../../../hooks/useFetch";
-import { MyImage } from "../../../components/lazyloading/image";
+import { MyImage } from "../../../components/lazyloading/Image";
 import ContentWrapper from "../../../components/contentWrapper/Contentwrapper";
 import "./heroBanner.css";
 export function Herobanner() {

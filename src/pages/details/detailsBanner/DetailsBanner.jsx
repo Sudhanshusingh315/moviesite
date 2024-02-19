@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../../hooks/useFetch";
-import { MyImage } from "../../../components/lazyloading/image";
+import { MyImage } from "../../../components/lazyloading/Image";
 import { useSelector } from "react-redux";
 import "./detailsbanner.css";
 import dayjs from "dayjs";

@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 
 import "./cast.css";
 
-import { MyImage } from "../../../components/lazyloading/image";
+import { MyImage } from "../../../components/lazyloading/Image";
 
 const Cast = ({ data, loading }) => {
   const { url } = useSelector((state) => state.home);

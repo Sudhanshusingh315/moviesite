@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 import "./style.css";
 // add your own image
-import { MyImage } from "../lazyloading/image";
+import { MyImage } from "../lazyloading/Image";
 // add your own rating
 import CircleRating from "../circleRating/CircleRating";
 // add your own genres

@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./style.css";
 
 import VideoPopup from "../../../components/videoPopup/VideoPopUp";
-import { MyImage } from "../../../components/lazyloading/image";
+import { MyImage } from "../../../components/lazyloading/Image";
 import { DetailsPlayIcon } from "../detailsPlayicon/DetailsPlayicon";
 
 const VideosSection = ({ data, loading }) => {
